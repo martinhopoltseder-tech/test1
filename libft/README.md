@@ -15,7 +15,6 @@ projects. The public declarations are in `libft.h`, and the build produces
 | Memory | Filling, copying, moving, searching, and comparing byte ranges, plus zero-initialized allocation with `ft_calloc`. |
 | Strings | Measuring, copying, comparing, and searching strings, plus helpers to extract, join, trim, split, and transform them. |
 | Conversion and output | Converting between integers and strings with `ft_atoi` and `ft_itoa`, and writing characters, strings, and integers to file descriptors. |
-| Linked lists (bonus) | Creating and inserting nodes, counting and finding nodes, deleting and clearing lists, and iterating or mapping over their contents. |
 
 Functions that return newly allocated strings, such as `ft_strdup` and
 `ft_itoa`, leave ownership of those strings with the caller. Free each
@@ -24,16 +23,19 @@ substring and then the array of pointers.
 
 ## Instructions
 
-Run the following commands from the repository root. The build uses `cc`
-with `-Wall -Wextra -Werror`, GNU Make, and `ar`.
+The repository root contains `Makefile`, `libft.h`, `README.md`, and the
+`ft_*.c` source files, including the linked list sources (`ft_lst*.c`).
+
+Run the following commands from that directory. GNU Make compiles the source
+files with `cc -Wall -Wextra -Werror` and archives the object files with
+`ar rcs`.
 
 | Command | Result |
 | --- | --- |
-| `make` | Builds the mandatory functions into `libft.a`. |
-| `make bonus` | Builds the library with the linked list functions. |
-| `make clean` | Removes the object files and the bonus marker. |
+| `make` or `make all` | Builds `libft.a` from the sources listed in the Makefile. |
+| `make clean` | Removes the object files. |
 | `make fclean` | Also removes `libft.a`. |
-| `make re` | Cleans and rebuilds the mandatory part. |
+| `make re` | Runs `fclean` and rebuilds `libft.a`. |
 
 To use the library, include `libft.h` and link your program against
 `libft.a`. For a local test, create a separate `main.c` in the project
@@ -55,8 +57,8 @@ cc -Wall -Wextra -Werror main.c libft.a -o test
 ./test
 ```
 
-The expected output is `Hello Libft`. Run `make bonus` before linking a
-program that uses the linked list functions.
+The expected output is `Hello Libft`. The example `main.c` and its `test`
+executable are for local testing.
 
 ## Resources
 
@@ -66,6 +68,5 @@ program that uses the linked list functions.
   `man 3 malloc`, `man 3 strdup`, `man 2 write`, and `man 3type size_t`.
 
 ### AI usage
-
 AI was used (as Tutor) to explain C concepts and walk through example implementations
 and test programs and troubleshoot written codes. It also helped draft this README.
