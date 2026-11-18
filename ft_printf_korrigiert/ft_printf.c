@@ -60,7 +60,7 @@ int	ft_printf(const char *format, ...)
 	int		total;
 	int		written;
 
-	if (!format)
+	if (format == NULL)
 		return (-1);
 	va_start(args, format);
 	i = 0;

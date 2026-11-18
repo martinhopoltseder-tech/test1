@@ -39,7 +39,4 @@ structure is necessary. Output counts accumulate the number of bytes written.
 - `man 3 printf`, `man 3 stdarg`, `man 2 write`.
 - The 42 Norm, version 4.1.
 
-AI assistance was used to discuss the task, propose a program structure,
-produce an initial implementation, and create and review sample tests.
-The code and behavior should be independently reviewed and explained
-before submission.
+AI assistance was used to discuss the task and propose a program structure.
