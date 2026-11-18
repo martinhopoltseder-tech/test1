@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdint.h>
 
 int	emit_nbr_base(unsigned long long number, const char *digits)
 {
@@ -64,7 +63,7 @@ int	emit_pointer(void *pointer)
 	int	digits_written;
 
 	if (!pointer)
-		return (emit_string("(nil)"));
+			return (emit_string("(nil)"));
 	written = emit_string("0x");
 	if (written < 0)
 		return (-1);

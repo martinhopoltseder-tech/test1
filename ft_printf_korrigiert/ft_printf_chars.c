@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <unistd.h>
 
 int	emit_char(char c)
 {
@@ -24,10 +23,10 @@ int	emit_string(const char *str)
 {
 	int	written;
 
-	if (!str)
+	if (str == NULL)
 		str = "(null)";
 	written = 0;
-	while (*str)
+	while (*str != '\0')
 	{
 		if (emit_char(*str) < 0)
 			return (-1);
